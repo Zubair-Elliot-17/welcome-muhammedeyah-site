@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Printer, Send } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -37,29 +37,30 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold">Address</p>
                   <p className="text-sm text-primary-foreground/70">
-                    123 School Street, Cape Town, Western Cape, 7764
+                    103 Batts Road, Wynberg, Western Cape, South Africa
                   </p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="mt-0.5 shrink-0 text-secondary" />
                 <div>
-                  <p className="font-semibold">Phone</p>
-                  <p className="text-sm text-primary-foreground/70">(021) 123-4567</p>
+                  <p className="font-semibold">Telephone</p>
+                  <p className="text-sm text-primary-foreground/70">021 797 8047</p>
+                  <p className="text-xs text-primary-foreground/50">International: +27 21 797 8047</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Printer size={20} className="mt-0.5 shrink-0 text-secondary" />
+                <div>
+                  <p className="font-semibold">Fax</p>
+                  <p className="text-sm text-primary-foreground/70">021 762 2487</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={20} className="mt-0.5 shrink-0 text-secondary" />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-sm text-primary-foreground/70">info@muhammedeyah.edu.za</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock size={20} className="mt-0.5 shrink-0 text-secondary" />
-                <div>
-                  <p className="font-semibold">Office Hours</p>
-                  <p className="text-sm text-primary-foreground/70">Monday – Friday: 7:30 AM – 2:30 PM</p>
+                  <p className="text-sm text-primary-foreground/70">principal@mups.co.za</p>
                 </div>
               </li>
             </ul>
@@ -85,53 +86,22 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="mb-1 block text-sm font-semibold text-foreground">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary"
-                    placeholder="Your name"
-                  />
+                  <label className="mb-1 block text-sm font-semibold text-foreground">Full Name</label>
+                  <input type="text" required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary" placeholder="Your name" />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-semibold text-foreground">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary"
-                    placeholder="you@example.com"
-                  />
+                  <label className="mb-1 block text-sm font-semibold text-foreground">Email Address</label>
+                  <input type="email" required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary" placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-semibold text-foreground">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary"
-                    placeholder="What is this about?"
-                  />
+                  <label className="mb-1 block text-sm font-semibold text-foreground">Subject</label>
+                  <input type="text" required className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary" placeholder="What is this about?" />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-semibold text-foreground">
-                    Message
-                  </label>
-                  <textarea
-                    required
-                    rows={4}
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary"
-                    placeholder="Type your message here..."
-                  />
+                  <label className="mb-1 block text-sm font-semibold text-foreground">Message</label>
+                  <textarea required rows={4} className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-secondary" placeholder="Type your message here..." />
                 </div>
-                <button
-                  type="submit"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 font-heading font-bold text-primary-foreground transition-transform hover:scale-[1.02]"
-                >
+                <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 font-heading font-bold text-primary-foreground transition-transform hover:scale-[1.02]">
                   Send Message <Send size={16} />
                 </button>
               </form>

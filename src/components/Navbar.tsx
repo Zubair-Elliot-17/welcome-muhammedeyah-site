@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
           <div className="leading-tight">
             <span className="block font-heading text-lg font-bold text-primary-foreground">
-              Muhammedeyah
+              Muhammadeyah
             </span>
             <span className="block text-xs font-medium text-school-gold-light">
               Primary School
@@ -32,7 +32,6 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
             <Link
@@ -49,7 +48,6 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
         <button
           className="text-primary-foreground md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -59,7 +57,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile nav */}
       {mobileOpen && (
         <nav className="border-t border-primary-foreground/10 bg-primary px-4 pb-4 md:hidden">
           {navItems.map((item) => (
