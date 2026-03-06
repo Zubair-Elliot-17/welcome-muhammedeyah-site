@@ -1,33 +1,23 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Image, Users, Heart } from "lucide-react";
-import heroImg from "@/assets/hero-students.jpg";
-import principalImg from "@/assets/principal.jpg";
 import schoolBuildingImg from "@/assets/school-building.jpg";
 
 const Index = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Happy students at Muhammedeyah Primary School"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
-        </div>
+      <section className="relative overflow-hidden bg-primary">
         <div className="container relative mx-auto px-4 py-24 md:py-36">
-          <div className="max-w-2xl animate-fade-in-up">
+          <div className="max-w-2xl">
             <span className="mb-4 inline-block rounded-full bg-secondary/20 px-4 py-1 text-sm font-semibold text-secondary">
               Welcome to Our School Family
             </span>
             <h1 className="mb-6 font-heading text-4xl font-extrabold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
-              Muhammedeyah Primary School
+              Muhammadeyah Primary School
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-primary-foreground/80">
               A warm, nurturing environment where every child is valued, inspired,
-              and empowered to reach their full potential in the heart of Cape Town.
+              and empowered to walk on the Straight Path — in the heart of Cape Town.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -47,32 +37,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Principal Welcome */}
+      {/* Welcome Section */}
       <section className="bg-school-warm-bg py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-10 md:flex-row">
-            <div className="shrink-0">
-              <img
-                src={principalImg}
-                alt="School Principal"
-                className="h-64 w-52 rounded-2xl object-cover shadow-lg ring-4 ring-secondary/30"
-              />
-            </div>
-            <div className="max-w-xl">
-              <span className="mb-2 inline-block text-sm font-semibold text-secondary">
-                From the Principal's Desk
-              </span>
-              <h2 className="mb-4 font-heading text-3xl font-bold text-foreground">
-                Welcome to Our School
-              </h2>
-              <p className="mb-3 leading-relaxed text-muted-foreground">
-                "At Muhammedeyah Primary, we believe every child deserves a supportive,
-                enriching education. Our dedicated staff works hand-in-hand with parents
-                to create a community where children feel safe, inspired, and excited to learn."
+          <div className="mx-auto max-w-3xl">
+            <span className="mb-2 inline-block text-sm font-semibold text-secondary">
+              Welcome
+            </span>
+            <h2 className="mb-6 font-heading text-3xl font-bold text-foreground">
+              Welcome
+            </h2>
+            <div className="space-y-4 leading-relaxed text-muted-foreground">
+              <p className="font-heading text-lg font-semibold text-foreground italic">
+                Assalaamu alaykum wa rahmatullahi wa barakatu
               </p>
-              <p className="font-heading font-bold text-foreground">
-                — Mrs. N. Davids, Principal
+              <p>
+                A warm welcome to your "loved one" to Muhammadeyah. May his / her stay with us be a prosperous, happy, exciting and learner-friendly one, Insha-Allah. Our aim is to equip the child to walk on the Straight Path towards Allah. This aim can be achieved through parent-child-teacher cooperation.
               </p>
+              <p>
+                By joining the Muhammadeyah family you and your child have become part of a school with a very rich history and a proud tradition which we hope you will help to preserve.
+              </p>
+              <p>
+                We hope that your child will be happy and successful at Muhammadeyah, Insha-Allah.
+              </p>
+              <div className="mt-6 border-l-4 border-secondary pl-4">
+                <p className="text-sm text-muted-foreground">With best wishes,</p>
+                <p className="font-heading font-bold text-foreground italic">
+                  "Your partner in education"
+                </p>
+                <p className="font-heading font-bold text-foreground">Principal</p>
+                <p className="text-sm text-muted-foreground">Muhammadeyah Primary School</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Printer } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,10 +9,10 @@ const Footer = () => {
           {/* School Info */}
           <div>
             <h3 className="mb-4 font-heading text-xl font-bold text-secondary">
-              Muhammedeyah Primary School
+              Muhammadeyah Primary School
             </h3>
             <p className="mb-4 text-sm leading-relaxed text-primary-foreground/70">
-              Nurturing young minds in a caring, community-driven environment since our founding.
+              Nurturing young minds in a caring, community-driven environment since 1929.
               Building brighter futures together in Cape Town.
             </p>
           </div>
@@ -29,10 +29,7 @@ const Footer = () => {
                 { label: "Contact", path: "/contact" },
               ].map((link) => (
                 <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-primary-foreground/70 transition-colors hover:text-secondary"
-                  >
+                  <Link to={link.path} className="text-primary-foreground/70 transition-colors hover:text-secondary">
                     {link.label}
                   </Link>
                 </li>
@@ -46,26 +43,26 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-secondary" />
-                <span>123 School Street, Cape Town, Western Cape, 7764</span>
+                <span>103 Batts Road, Wynberg, Western Cape, South Africa</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0 text-secondary" />
-                <span>(021) 123-4567</span>
+                <span>021 797 8047</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Printer size={16} className="shrink-0 text-secondary" />
+                <span>Fax: 021 762 2487</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0 text-secondary" />
-                <span>info@muhammedeyah.edu.za</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Clock size={16} className="shrink-0 text-secondary" />
-                <span>Mon – Fri: 7:30 AM – 2:30 PM</span>
+                <span>principal@mups.co.za</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/50">
-          © {new Date().getFullYear()} Muhammedeyah Primary School. All rights reserved.
+          © {new Date().getFullYear()} Muhammadeyah Primary School. All rights reserved.
         </div>
       </div>
     </footer>

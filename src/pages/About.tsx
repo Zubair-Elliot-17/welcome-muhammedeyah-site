@@ -1,77 +1,150 @@
-import { BookOpen, Users, Heart, Award, Star, Shield } from "lucide-react";
-import schoolBuildingImg from "@/assets/school-building.jpg";
+import { BookOpen, Star, Target, History, Award, Users } from "lucide-react";
 
 const About = () => {
   return (
     <div>
       {/* Hero banner */}
-      <section className="relative overflow-hidden">
-        <img
-          src={schoolBuildingImg}
-          alt="Muhammedeyah Primary School campus"
-          className="h-64 w-full object-cover md:h-80"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/30" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="font-heading text-4xl font-extrabold text-primary-foreground md:text-5xl">
-              About Our School
-            </h1>
+      <section className="relative overflow-hidden bg-primary py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="font-heading text-4xl font-extrabold text-primary-foreground md:text-5xl">
+            Muhammadeyah Primary School
+          </h1>
+          <p className="mx-auto mt-4 max-w-xl text-primary-foreground/70">
+            Established 1929 · Wynberg, Cape Town
+          </p>
+        </div>
+      </section>
+
+      {/* Our Name */}
+      <section className="bg-school-warm-bg py-16">
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="mb-2 flex items-center gap-2">
+            <Star size={20} className="text-secondary" />
+            <span className="text-sm font-semibold text-secondary">Our Name</span>
+          </div>
+          <h2 className="mb-6 font-heading text-3xl font-bold text-foreground">
+            The Meaning Behind Our Name
+          </h2>
+          <p className="leading-relaxed text-muted-foreground">
+            It was in 1929 during the month of Rabiul Awwal, the month of the birth of our beloved Prophet (SAW), when the founding fathers contemplated an appropriate name for the school. They decided to name the school Muhammadeyah in honour of our beloved Prophet Muhammad (SAW).
+          </p>
+        </div>
+      </section>
+
+      {/* Mission & Motto */}
+      <section className="py-16">
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-2xl bg-card p-8 shadow-sm ring-1 ring-border">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-school-gold-soft">
+                <Target size={28} className="text-school-navy" />
+              </div>
+              <h3 className="mb-3 font-heading text-xl font-bold text-foreground">Mission Statement</h3>
+              <p className="leading-relaxed text-muted-foreground">
+                To strive towards an education of the highest calibre through a holistic approach to learning and teaching according to the norms and values of Islam.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-card p-8 shadow-sm ring-1 ring-border">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-school-gold-soft">
+                <BookOpen size={28} className="text-school-navy" />
+              </div>
+              <h3 className="mb-3 font-heading text-xl font-bold text-foreground">School Motto</h3>
+              <p className="leading-relaxed text-muted-foreground">
+                The inscription on our school badge is:
+              </p>
+              <p className="mt-2 font-heading text-2xl font-extrabold text-secondary">
+                Iqra — "Read!"
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Introduction */}
       <section className="bg-school-warm-bg py-16">
         <div className="container mx-auto max-w-3xl px-4">
-          <span className="mb-2 inline-block text-sm font-semibold text-secondary">Our Story</span>
+          <div className="mb-2 flex items-center gap-2">
+            <Award size={20} className="text-secondary" />
+            <span className="text-sm font-semibold text-secondary">Introduction</span>
+          </div>
           <h2 className="mb-6 font-heading text-3xl font-bold text-foreground">
-            Building Futures Since Day One
+            About Our School
           </h2>
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Muhammedeyah Primary School is a cornerstone of our Cape Town community.
-              Established to provide quality education for children in the area, our school
-              has grown into a vibrant learning institution where academic excellence meets
-              warm, family-oriented values.
+              Muhammadeyah is a primary school under the Western Cape Education Department located in the Wynberg residential area in the Southern Suburbs of Cape Town.
             </p>
             <p>
-              We serve learners from Grade R to Grade 7, offering a well-rounded curriculum
-              that includes academics, sports, arts, and cultural activities. Our dedicated
-              staff goes above and beyond to ensure every child feels valued and supported.
+              The school was established to serve the Muslim community by providing an education that combines traditional Islamic learning with the tools needed to participate actively and creatively in modern society.
             </p>
             <p>
-              At the heart of our school is a strong sense of community. We believe that
-              education is a partnership between the school, parents, and the broader community,
-              and we work together to create the best possible environment for our children to
-              thrive.
+              Muhammadeyah Primary School first opened its doors in 1929 and has since grown into a respected institution known both locally and internationally, with former students living and working across the world.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Values */}
+      {/* History */}
       <section className="py-16">
-        <div className="container mx-auto px-4 text-center">
-          <span className="mb-2 inline-block text-sm font-semibold text-secondary">What We Stand For</span>
-          <h2 className="mb-10 font-heading text-3xl font-bold text-foreground">Our Values</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { icon: Heart, title: "Compassion", desc: "We treat every person with kindness, empathy, and respect." },
-              { icon: Star, title: "Excellence", desc: "We strive for the highest standards in everything we do." },
-              { icon: Users, title: "Community", desc: "We build strong bonds between learners, families, and staff." },
-              { icon: Shield, title: "Integrity", desc: "We act with honesty and take responsibility for our actions." },
-              { icon: BookOpen, title: "Curiosity", desc: "We encourage questioning, exploration, and a love for learning." },
-              { icon: Award, title: "Inclusivity", desc: "We celebrate diversity and ensure every child feels welcome." },
-            ].map((v) => (
-              <div key={v.title} className="rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-school-gold-soft">
-                  <v.icon size={28} className="text-school-navy" />
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="mb-2 flex items-center gap-2">
+            <History size={20} className="text-secondary" />
+            <span className="text-sm font-semibold text-secondary">Our History</span>
+          </div>
+          <h2 className="mb-6 font-heading text-3xl font-bold text-foreground">
+            A Legacy of Community & Learning
+          </h2>
+          <div className="space-y-4 leading-relaxed text-muted-foreground">
+            <p>
+              Muhammadeyah Primary School was established through the efforts of the Moslem Education Trust (MET), founded in 1927 with the goal of creating a Muslim school for the community.
+            </p>
+            <p>
+              The first teacher and principal was the founding principal, who helped start what was initially a small "Garden School" where teachers volunteered their services. From this dedication, Muhammadeyah Primary School was born — a school built by the community, for the community.
+            </p>
+            <p>
+              Over the decades, successive principals and teachers strengthened the institution and guided it through periods of growth and social change. The school expanded physically with additional classrooms and a hall to accommodate more learners.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="mt-10 rounded-2xl bg-primary p-8">
+            <h3 className="mb-6 font-heading text-xl font-bold text-primary-foreground">
+              Muhammadeyah Today
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                "720 learners",
+                "28 teachers",
+                "21 classes",
+                "Two computer rooms",
+                "Islamic & Arabic teachers",
+                "Remedial education support",
+              ].map((stat) => (
+                <div key={stat} className="rounded-xl bg-primary-foreground/10 px-4 py-3 text-sm font-semibold text-primary-foreground">
+                  {stat}
                 </div>
-                <h3 className="mb-2 font-heading text-lg font-bold text-foreground">{v.title}</h3>
-                <p className="text-sm text-muted-foreground">{v.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Activities */}
+          <div className="mt-10">
+            <h3 className="mb-4 font-heading text-xl font-bold text-foreground">
+              Learner Activities
+            </h3>
+            <p className="mb-4 text-muted-foreground">
+              The school promotes an Islamic environment and holistic education while following the full curriculum of the Western Cape Education Department. Learners participate in activities including:
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Swimming", "Athletics", "Soccer", "Volleyball", "Cricket", "Cycling", "Hiking"].map((activity) => (
+                <span key={activity} className="rounded-full bg-school-gold-soft px-4 py-1.5 text-sm font-semibold text-school-navy">
+                  {activity}
+                </span>
+              ))}
+            </div>
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              The school has achieved strong academic performance in national and systemic assessments, demonstrating excellence in both Mathematics and English.
+            </p>
           </div>
         </div>
       </section>

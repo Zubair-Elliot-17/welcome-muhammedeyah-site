@@ -1,24 +1,24 @@
-import principalImg from "@/assets/principal.jpg";
+import { Users, BookOpen, ClipboardList } from "lucide-react";
 
-const staffMembers = [
-  { name: "Mrs. N. Davids", role: "Principal", subject: "School Leadership", img: principalImg },
-  { name: "Mr. A. Jacobs", role: "Deputy Principal", subject: "Mathematics", img: null },
-  { name: "Ms. F. Adams", role: "Grade 1 Teacher", subject: "Foundation Phase", img: null },
-  { name: "Mrs. S. Petersen", role: "Grade 2 Teacher", subject: "Foundation Phase", img: null },
-  { name: "Mr. R. Khan", role: "Grade 3 Teacher", subject: "Intermediate Phase", img: null },
-  { name: "Ms. L. Williams", role: "Grade 4 Teacher", subject: "Languages & Social Sciences", img: null },
-  { name: "Mr. T. Abrahams", role: "Grade 5 Teacher", subject: "Natural Sciences", img: null },
-  { name: "Mrs. Z. Moosa", role: "Grade 6 Teacher", subject: "Mathematics & Technology", img: null },
-  { name: "Ms. D. Hendricks", role: "Grade 7 Teacher", subject: "English & Life Skills", img: null },
-  { name: "Mr. J. September", role: "Sports Coordinator", subject: "Physical Education", img: null },
-  { name: "Mrs. H. Isaacs", role: "Librarian", subject: "Library & Reading", img: null },
-  { name: "Ms. C. Daniels", role: "Admin Secretary", subject: "Administration", img: null },
+const staffGroups = [
+  {
+    icon: Users,
+    role: "Principal",
+    description: "School leadership, vision, and overall management of Muhammadeyah Primary School.",
+  },
+  {
+    icon: BookOpen,
+    role: "Teachers",
+    description:
+      "28 dedicated educators covering all grades from Grade R to Grade 7, including Islamic studies, Arabic reading, remedial education, physical education, and creative arts.",
+  },
+  {
+    icon: ClipboardList,
+    role: "Administrative Staff",
+    description:
+      "Our admin team ensures the smooth day-to-day operations of the school, supporting learners, parents, and teachers alike.",
+  },
 ];
-
-const getInitials = (name: string) => {
-  const parts = name.replace(/Mrs\.|Mr\.|Ms\./, "").trim().split(" ");
-  return parts.map((p) => p[0]).join("").toUpperCase();
-};
 
 const Staff = () => {
   return (
@@ -37,26 +37,19 @@ const Staff = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {staffMembers.map((member) => (
+        <div className="mx-auto grid max-w-3xl gap-6">
+          {staffGroups.map((group) => (
             <div
-              key={member.name}
-              className="flex flex-col items-center rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border text-center transition-shadow hover:shadow-md"
+              key={group.role}
+              className="flex items-start gap-5 rounded-2xl bg-card p-8 shadow-sm ring-1 ring-border transition-shadow hover:shadow-md"
             >
-              {member.img ? (
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="mb-4 h-28 w-28 rounded-full object-cover ring-4 ring-school-gold-soft"
-                />
-              ) : (
-                <div className="mb-4 flex h-28 w-28 items-center justify-center rounded-full bg-primary font-heading text-2xl font-bold text-primary-foreground ring-4 ring-school-gold-soft">
-                  {getInitials(member.name)}
-                </div>
-              )}
-              <h3 className="font-heading text-lg font-bold text-foreground">{member.name}</h3>
-              <p className="text-sm font-semibold text-secondary">{member.role}</p>
-              <p className="mt-1 text-xs text-muted-foreground">{member.subject}</p>
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-school-gold-soft">
+                <group.icon size={28} className="text-school-navy" />
+              </div>
+              <div>
+                <h3 className="font-heading text-xl font-bold text-foreground">{group.role}</h3>
+                <p className="mt-1 leading-relaxed text-muted-foreground">{group.description}</p>
+              </div>
             </div>
           ))}
         </div>
