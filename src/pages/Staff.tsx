@@ -1,30 +1,13 @@
-import { Users, BookOpen, ClipboardList } from "lucide-react";
-
-const staffGroups = [
-  {
-    icon: Users,
-    role: "Principal",
-    description: "School leadership, vision, and overall management of Muhammadeyah Primary School.",
-  },
-  {
-    icon: BookOpen,
-    role: "Teachers",
-    description:
-      "28 dedicated educators covering all grades from Grade R to Grade 7, including Islamic studies, Arabic reading, remedial education, physical education, and creative arts.",
-  },
-  {
-    icon: ClipboardList,
-    role: "Administrative Staff",
-    description:
-      "Our admin team ensures the smooth day-to-day operations of the school, supporting learners, parents, and teachers alike.",
-  },
-];
+import placeholderPrincipal from "@/assets/placeholder-principal.png";
+import placeholderTeacher from "@/assets/placeholder-staff.png";
+import placeholderAdmin from "@/assets/placeholder-admin.png";
 
 const Staff = () => {
   return (
     <div className="bg-school-warm-bg py-16">
       <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
+        {/* Page Header */}
+        <div className="mb-16 text-center">
           <span className="mb-2 inline-block text-sm font-semibold text-secondary">
             Meet Our Team
           </span>
@@ -32,27 +15,80 @@ const Staff = () => {
             Our Dedicated Staff
           </h1>
           <p className="mx-auto max-w-xl text-muted-foreground">
-            Our caring and experienced educators are passionate about making a difference
+            Our caring and experienced team is passionate about making a difference
             in every child's life.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-3xl gap-6">
-          {staffGroups.map((group) => (
-            <div
-              key={group.role}
-              className="flex items-start gap-5 rounded-2xl bg-card p-8 shadow-sm ring-1 ring-border transition-shadow hover:shadow-md"
-            >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-school-gold-soft">
-                <group.icon size={28} className="text-school-navy" />
+        {/* Principal Section */}
+        <section className="mb-16">
+          <h2 className="mb-8 text-center font-heading text-2xl font-bold text-foreground">
+            Principal
+          </h2>
+          <div className="mx-auto max-w-xs">
+            <div className="flex flex-col items-center rounded-2xl bg-card p-8 shadow-sm ring-1 ring-border text-center">
+              <div className="mb-4 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-muted ring-4 ring-secondary/30">
+                <img
+                  src={placeholderPrincipal}
+                  alt="Principal placeholder"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div>
-                <h3 className="font-heading text-xl font-bold text-foreground">{group.role}</h3>
-                <p className="mt-1 leading-relaxed text-muted-foreground">{group.description}</p>
-              </div>
+              <h3 className="font-heading text-lg font-bold text-foreground">Principal</h3>
+              <p className="mt-1 text-sm text-muted-foreground">School Leadership</p>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
+
+        {/* Teachers Section */}
+        <section className="mb-16">
+          <h2 className="mb-2 text-center font-heading text-2xl font-bold text-foreground">
+            Teachers
+          </h2>
+          <p className="mb-8 text-center text-sm text-muted-foreground">21 dedicated educators</p>
+          <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+            {Array.from({ length: 21 }).map((_, i) => (
+              <div
+                key={`teacher-${i}`}
+                className="flex flex-col items-center rounded-2xl bg-card p-5 shadow-sm ring-1 ring-border text-center transition-shadow hover:shadow-md"
+              >
+                <div className="mb-3 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-muted ring-4 ring-secondary/20">
+                  <img
+                    src={placeholderTeacher}
+                    alt="Teacher placeholder"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <h3 className="font-heading text-sm font-bold text-foreground">Teacher</h3>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Administrative Staff Section */}
+        <section>
+          <h2 className="mb-2 text-center font-heading text-2xl font-bold text-foreground">
+            Administrative Staff
+          </h2>
+          <p className="mb-8 text-center text-sm text-muted-foreground">10 support team members</p>
+          <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {Array.from({ length: 10 }).map((_, i) => (
+              <div
+                key={`admin-${i}`}
+                className="flex flex-col items-center rounded-2xl bg-card p-5 shadow-sm ring-1 ring-border text-center transition-shadow hover:shadow-md"
+              >
+                <div className="mb-3 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-muted ring-4 ring-secondary/20">
+                  <img
+                    src={placeholderAdmin}
+                    alt="Administrative staff placeholder"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <h3 className="font-heading text-sm font-bold text-foreground">Administrative Staff</h3>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
