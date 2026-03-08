@@ -4,8 +4,9 @@ const About = () => {
   return (
     <div>
       {/* Hero banner */}
-      <section className="relative overflow-hidden bg-primary py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[hsl(216,45%,28%)] py-20">
+        <div className="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-secondary/10 to-transparent" />
+        <div className="container relative mx-auto px-4 text-center">
           <h1 className="font-heading text-4xl font-extrabold text-primary-foreground md:text-5xl">
             Muhammadeyah Primary School
           </h1>

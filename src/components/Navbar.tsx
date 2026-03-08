@@ -16,7 +16,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-primary shadow-lg">
+    <header className="sticky top-0 z-50 border-b border-primary-foreground/10 bg-primary shadow-[0_4px_12px_hsl(216,60%,22%,0.3)]">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary font-heading text-lg font-extrabold text-secondary-foreground">

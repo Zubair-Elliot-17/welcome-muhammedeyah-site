@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Printer } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-gradient-to-br from-primary via-primary to-[hsl(216,45%,28%)] text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           {/* School Info */}
