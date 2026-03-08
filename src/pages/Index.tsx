@@ -6,7 +6,13 @@ const Index = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-primary">
+      <section className="relative overflow-hidden">
+        <img
+          src={schoolBuildingImg}
+          alt="Muhammadeyah Primary School building"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/30" />
         <div className="container relative mx-auto px-4 py-24 md:py-36">
           <div className="max-w-2xl">
             <span className="mb-4 inline-block rounded-full bg-secondary/20 px-4 py-1 text-sm font-semibold text-secondary">

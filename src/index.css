@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 36 30% 98%;
     --foreground: 216 50% 15%;
 
-    --card: 0 0% 100%;
+    --card: 38 25% 97%;
     --card-foreground: 216 50% 15%;
 
-    --popover: 0 0% 100%;
+    --popover: 38 25% 97%;
     --popover-foreground: 216 50% 15%;
 
     --primary: 216 60% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 95% 55%;
+    --secondary: 40 75% 52%;
     --secondary-foreground: 216 60% 15%;
 
-    --muted: 210 30% 96%;
-    --muted-foreground: 216 20% 46%;
+    --muted: 35 20% 94%;
+    --muted-foreground: 30 15% 42%;
 
-    --accent: 45 95% 55%;
+    --accent: 40 75% 52%;
     --accent-foreground: 216 60% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 25% 90%;
-    --input: 210 25% 90%;
+    --border: 33 20% 88%;
+    --input: 33 20% 88%;
     --ring: 216 60% 22%;
 
     --radius: 0.75rem;
 
     --school-navy: 216 60% 22%;
     --school-navy-light: 216 45% 35%;
-    --school-gold: 45 95% 55%;
-    --school-gold-light: 45 90% 70%;
-    --school-gold-soft: 45 80% 92%;
-    --school-warm-bg: 40 30% 97%;
-    --school-warm-card: 40 20% 99%;
+    --school-gold: 40 75% 52%;
+    --school-gold-light: 38 65% 65%;
+    --school-gold-soft: 38 55% 91%;
+    --school-warm-bg: 36 30% 96%;
+    --school-warm-card: 38 25% 97%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
