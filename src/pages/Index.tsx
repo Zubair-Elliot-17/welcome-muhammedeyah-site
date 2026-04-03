@@ -139,7 +139,7 @@ const Index = () => {
             </Link>
             <Link
               to="/gallery"
-              className="group relative overflow-hidden rounded-2xl"
+              className="group relative overflow-hidden rounded-2xl min-h-[280px]"
             >
               <img
                 src={schoolBuildingImg}
