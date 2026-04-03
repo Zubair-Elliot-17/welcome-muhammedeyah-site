@@ -97,13 +97,14 @@ const About = () => {
           </h2>
           <div className="space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Muhammadeyah Primary School was established through the efforts of the Moslem Education Trust (MET), founded in 1927 with the goal of creating a Muslim school for the community.
+              Muhammadeyah is a primary school under the Western Cape Education Department. We are based in the Wynberg residential area – The school first opened its doors to the learners of the community in 1929 with Mr. M.S. Berdien as the first principal. They first conducted a so-called Garden School where the teachers offered their services free of charge. Emanating from this selfless dedication and commitment of the pioneers was the birth of Muhammadeyah Primary School – an institution developed by the community, for the community and dedicated to teaching and learning within an Islamic context.
             </p>
+            <blockquote className="border-l-4 border-secondary pl-4 italic text-foreground/80">
+              "Children do not only come to school to merely write and pass exams but rather to Live, to laugh and play and to do the things they enjoy doing and to respect and adopt the norms and values of their elders. When children are happy, teachers are happy; Muhammadeyah is a happy school!"
+              <span className="mt-2 block text-sm not-italic text-muted-foreground">— Mr. Solomons</span>
+            </blockquote>
             <p>
-              The first teacher and principal was the founding principal, who helped start what was initially a small "Garden School" where teachers volunteered their services. From this dedication, Muhammadeyah Primary School was born — a school built by the community, for the community.
-            </p>
-            <p>
-              Over the decades, successive principals and teachers strengthened the institution and guided it through periods of growth and social change. The school expanded physically with additional classrooms and a hall to accommodate more learners.
+              To quote Mr. Solomons at the end of his 36 years as principal: "The school progressed from a non-entity to an educational institution commanding the respect of the community at large." Mr. Jedaar, Mr. Gamiet and Mr. Ismail were at the helm of affairs during the history of our school, building on passionately and enthusiastically from their predecessors. Mr. Ismail was tasked with taking the school into the next level of the high-tech and internet period. Mr. Salie was the Acting principal until the end of March 2019. Mr. E. Abrahams took over the principal reins from Mr. Ismail in April 2019 and is currently leading the school.
             </p>
           </div>
 
@@ -114,12 +115,13 @@ const About = () => {
             </h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
-                "720 learners",
+                "Close to 800 learners",
                 "28 teachers",
-                "21 classes",
-                "Two computer rooms",
-                "Islamic & Arabic teachers",
-                "Remedial education support",
+                "24 classes",
+                "Computer room",
+                "Islamic & Arabic reading teachers",
+                "Remedial & 2 PE teachers",
+                "1 Creative Arts teacher",
               ].map((stat) => (
                 <div key={stat} className="rounded-xl bg-primary-foreground/10 px-4 py-3 text-sm font-semibold text-primary-foreground">
                   {stat}
@@ -134,18 +136,15 @@ const About = () => {
               Learner Activities
             </h3>
             <p className="mb-4 text-muted-foreground">
-              The school promotes an Islamic environment and holistic education while following the full curriculum of the Western Cape Education Department. Learners participate in activities including:
+              Besides the full WCED curriculum, we participate in sport as we are very passionate about it and we have a strong belief in the holistic development of our learners:
             </p>
             <div className="flex flex-wrap gap-2">
-              {["Swimming", "Athletics", "Soccer", "Volleyball", "Cricket", "Cycling", "Hiking"].map((activity) => (
+              {["Athletics", "Soccer", "Cricket", "Cycling", "Calligraphy", "Chess", "Archery", "Netball", "Nasheed Groups", "Mini Cricket"].map((activity) => (
                 <span key={activity} className="rounded-full bg-school-gold-soft px-4 py-1.5 text-sm font-semibold text-school-navy">
                   {activity}
                 </span>
               ))}
             </div>
-            <p className="mt-6 leading-relaxed text-muted-foreground">
-              The school has achieved strong academic performance in national and systemic assessments, demonstrating excellence in both Mathematics and English.
-            </p>
           </div>
         </div>
       </section>
